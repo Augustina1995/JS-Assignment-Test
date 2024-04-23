@@ -8,3 +8,27 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+// ANSWER
+
+const form = document.querySelector("form");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const kilogramInput = parseFloat(document.getElementById("search").value);
+
+  if (isNaN(parseFloat(kilogramInput))) {
+    alert("Please enter a valid number.");
+    return;
+  }
+
+  const pounds = kilogramInput * 2.2046;
+  const grams = kilogramInput / 0.0010000;
+  const ounces = kilogramInput * 35.274;
+
+  const result = `Mass in pounds: ${pounds.toFixed(2)}lb <br> Mass in grams: ${grams.toFixed(2)}g <br> Mass in ounces: ${ounces.toFixed(2)}oz`;
+
+  const outputDiv = document.getElementById("output");
+  outputDiv.style.display = "block";
+  outputDiv.innerHTML = result;
+});

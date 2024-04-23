@@ -3,3 +3,15 @@ Parašykite JS kodą, kuris skaičiuos kiek kartų buvo paspaustas mygtukas
 su tekstu "CLICK ME". Paspaudimų rezultatas turi būti matomas dešinėje
 pusėje esančiame "state" skaičiavimo bloke (<div id="btn__state">0</div>)
 ------------------------------------------------------------------- */
+
+// ANSWER
+
+const btnElement = document.getElementById("btn__element");
+const btnState = document.getElementById("btn__state");
+
+let clickCount = 0;
+
+btnElement.addEventListener("click", function () {
+    clickCount++;
+    btnState.textContent = clickCount;
+});

@@ -63,3 +63,17 @@ form {
     font-size: 2em;
   }
 }
+
+/* output div/result styling */
+
+#output {
+  display: none;
+  max-width: 80%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgb(176, 176, 176);
+}
