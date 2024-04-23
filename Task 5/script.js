@@ -25,7 +25,7 @@ function filterDogOwners(users) {
 }
 
 function filterAdults(users) {
-  return users.filter(user => user.age > 18);
+  return users.filter(user => user.age >= 18);
 }
 
 const dogOwners = filterDogOwners(users);
